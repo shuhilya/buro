@@ -3,8 +3,8 @@ from typing import List
 
 from fastapi import APIRouter, Depends
 
-from services.power_system import get_power_system
-from drivers.power_drivers import Measures
+from power_api.services.power_system import get_power_system
+from power_api.drivers.power_drivers import Measures
 
 logger = logging.getLogger(__name__)
 

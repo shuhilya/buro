@@ -5,10 +5,10 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
-from api.v1 import power_system
-from core.logger import LOGGING
-from drivers import power_drivers
-from drivers.power_drivers import PowerMeasure, PowerOutput, PowerSource
+from power_api.api.v1 import power_system
+from power_api.core.logger import LOGGING
+from power_api.drivers import power_drivers
+from power_api.drivers.power_drivers import PowerMeasure, PowerOutput, PowerSource
 
 
 config.dictConfig(LOGGING)

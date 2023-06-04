@@ -2,12 +2,12 @@ from functools import lru_cache
 
 from fastapi import Depends
 
-from drivers.power_drivers import (PowerMeasure,
-                                   PowerOutput,
-                                   PowerSource,
-                                   get_power_measure,
-                                   get_power_output,
-                                   get_power_source)
+from power_api.drivers.power_drivers import (PowerMeasure,
+                                             PowerOutput,
+                                             PowerSource,
+                                             get_power_measure,
+                                             get_power_output,
+                                             get_power_source)
 
 __all__ = ["get_power_system"]
 

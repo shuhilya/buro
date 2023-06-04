@@ -1,4 +1,4 @@
-from core.settings import settings
+from power_api.core.settings import settings
 
 LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 LOG_DEFAULT_HANDLERS = [
