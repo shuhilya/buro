@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "ugc"
+version = "0.0.1"
+description = "UGC api sericce"
+authors = ["yandex students"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10.0"
+pydantic = "^1.8.0"
+python-dotenv = "^1.0.0"
+fastapi = "^0.96.0"
+uvicorn = "^0.22.0"
+orjson = "^3.5.0"
