@@ -1,7 +1,7 @@
 import logging
 from typing import List
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 
 from power_api.services.power_system import get_power_system
 from power_api.drivers.power_drivers import Measures
@@ -39,13 +39,14 @@ async def switch_chanel_on(
     tags=["SwitchOff"],
 )
 async def switch_chanel_off(
-        chanel_number: int,
-        power_system=Depends(get_power_system)
+        info: Request,
+        power_system=Depends(get_power_system),
 ):
-    logger.info(f"Switch off the chanel {chanel_number}")
+    req_info = await info.json()
+    logger.info(f"Switch off the chanel {req_info['chanel_number']}")
 
     await power_system.switch_off_power_chanel(
-        chanel_number=chanel_number
+        chanel_number=req_info["chanel_number"]
     )
 
 

@@ -12,11 +12,15 @@ class Measures(BaseModel):
 
 
 class PowerSource:
+    def __init__(self):
+        self._scpi_current_message = ""
+        self._scpi_tension_message = ""
+
     async def set_current(self, current: float):
-        ...
+        self._scpi_current_message = f"current:{current}\n"
 
     async def set_tension(self, tension: float):
-        ...
+        self._scpi_tension_message = f"tension:{tension}\n"
 
 
 class PowerOutput:

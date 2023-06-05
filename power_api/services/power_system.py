@@ -9,7 +9,7 @@ from power_api.drivers.power_drivers import (PowerMeasure,
                                              get_power_output,
                                              get_power_source)
 
-__all__ = ["get_power_system"]
+__all__ = ["get_power_system", "PowerSystem"]
 
 
 class PowerSystem:
